@@ -11,3 +11,7 @@ Records are private to their local owner except tenant admins. Related AccountId
 Requests require `Authorization: Bearer <token>`. `/healthz` is public. Unknown/repeated query parameters and unknown body fields are rejected. Authentication uses local TOKENS configuration, not vendor OAuth. Transactions commit only successful requests.
 
 Ordering supports one stored field, including unselected fields; ASC and NULLS FIRST are defaults. Numeric Amount sorts numerically; other supported values use uppercase string ordering (English-style, no locale setting). Equal values retain local insertion order. Description (long text), Status/StageName (picklists), and AccountId (relationship semantics) are rejected as sort fields. No multi-field order, expressions, joins or locale/currency conversion. Visibility and WHERE filtering precede sorting; LIMIT follows it.
+
+## AI product direction
+
+Requirement added 2026-11-16: OpenForce must become fully AI enabled, agentic and conversational across its core journeys. The [AI capability and acceptance guide](ai-capabilities.md) defines the required work and evidence. This direction does not change the implementation scope or historical validation results recorded above.
